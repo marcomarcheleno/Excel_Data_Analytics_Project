@@ -3,18 +3,18 @@
 
 ## Introduction
 
-As a former job seeker, I’ve always been surprised by the lack of data exploring the most optimal jobs and skills in the data science market. I set out to understand what skills top employers request and how to land more pay.
+Analisis ini dilakukan untuk mengetahui apa saja sih skill-skill yang paling dibutuhkan dalam berbagai jenis pekerjaan data dan rata-rata gaji yang diperoleh dari pekerjaan yang menggunakan skill tersebut.
 
-### Questions to Analyze
+### Masalah Yang Dianalisis
 
-To understand the data science job market, I asked the following:
+Untuk memahami pasar kerja di bidang data science, analisis ini berfokus pada beberapa pertanyaan berikut:
 
-1. **Do more skills get you better pay?**
-2. **What’s the salary for data jobs in different regions?**
-3. **What are the top skills of data professionals?**
-4. **What’s the pay for the top 10 skills?**
+1. **Apakah semakin banyak skill dapat menghasilkan gaji yang lebih tinggi?**
+2. **Berapa rata-rata gaji pekerjaan data di berbagai wilayah?**
+3. **Apa saja skill utama yang dimiliki para profesional data?**
+4. **Berapa rata-rata gaji untuk 10 skill teratas?**
 
-### Excel Skills Used
+### Skill Excel Yang Digunakan
 
 The following Excel skills were utilized for analysis:
 
@@ -26,9 +26,9 @@ The following Excel skills were utilized for analysis:
 
 ### Data Jobs Dataset
 
-The dataset used for this project contains real-world data science job information from 2023. The dataset is available via my Excel course, which provides a foundation for analyzing data using Excel. 
+Dataset yang digunakan dalam proyek ini berisi data pekerjaan data science nyata dari tahun 2023. Dataset tersebut diperoleh dari kursus Excel yang saya ikuti dan digunakan sebagai dasar untuk melakukan analisis data menggunakan Excel.
 
-It includes detailed information on:
+Dataset ini mencakup informasi detail mengenai:
 
 - **👨‍💼 Job titles**
 - **💰 Salaries**
