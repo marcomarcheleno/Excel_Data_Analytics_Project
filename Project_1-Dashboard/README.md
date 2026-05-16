@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Dasbor gaji ini dibuat untuk membantu orang-orang yang sedang mencari kerja untuk mengetahui perkiraan gaji dari pekerjaan yang mereka inginkan.
+Dashboard gaji ini dibuat untuk membantu orang-orang yang sedang mencari kerja untuk mengetahui perkiraan gaji dari pekerjaan yang mereka inginkan.
 
 Data ini saya dapatkan dari kursus excel yang saya ikuti secara online dan data tersebut telah mengandung informasi yang cukup lengkap dari nama pekerjaan, gaji, lokasi, dan skill-skill yang dibutuhkan.
 
