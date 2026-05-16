@@ -35,60 +35,64 @@ Dataset ini mencakup informasi detail mengenai:
 - **📍 Locations**
 - **🛠️ Skills**
 
-## 1️⃣ Do more skills get you better pay?
+## 1️⃣ Apakah semakin banyak skill menghasilkan gaji yang lebih tinggi?
 
 ### 🔍 Skill: Power Query (ETL)
 
 #### 📥 Extract
 
-- I first used Power Query to extract the original data (`data_salary_all.xlsx`) and create two queries:
-    - 🗃️ First one with all the data jobs information.
-    - 🔧 The second listing the skills for each job ID.
+- Pertama, saya menggunakan Power Query untuk mengekstrak data asli (`data_salary_all.xlsx`) dan membuat dua query:
+   - 🗃️ Query pertama berisi seluruh informasi pekerjaan di bidang data.
+   - 🔧 Query kedua berisi daftar skill untuk setiap job ID.
 
 #### 🔄 Transform
+- Selanjutnya, saya melakukan transformasi pada masing-masing query dengan:
+   - Mengubah tipe data kolom
+   - Menghapus kolom yang tidak diperlukan
+   - Membersihkan teks dari kata-kata tertentu
+   - Menghapus spasi berlebih
+     
+    📊 **data_jobs_all**
 
-- Then, I transformed each query by changing column types, removing unnecessary columns, cleaning text to eliminate specific words, and trimming excess whitespace.
-    - 📊 data_jobs_all
+     ![2_Project_Analysis_Screenshot1.png](/0_Resources/Images/2_Project_Analysis_Screenshot1.png)
 
-        ![2_Project_Analysis_Screenshot1.png](/0_Resources/Images/2_Project_Analysis_Screenshot1.png)
+    🛠️ **data_job_skills**
 
-    - 🛠️ data_job_skills
-
-        ![2_Project_Analysis_Screenshot2.png](/0_Resources/Images/2_Project_Analysis_Screenshot2.png)
+     ![2_Project_Analysis_Screenshot2.png](/0_Resources/Images/2_Project_Analysis_Screenshot2.png)
 
 #### 🔗 Load
 
-- Finally, I loaded both transformed queries into the workbook, setting the foundation for my subsequent analysis.
-    - 📊 data_jobs_all
+- Terakhir, kedua query yang telah ditransformasikan dimuat ke workbook sebagai dasar untuk analisis selanjutnya.
+    📊 **data_jobs_all**
 
-        ![2_Project_Analysis_Screenshot3.png](/0_Resources/Images/2_Project_Analysis_Screenshot3.png)
+     ![2_Project_Analysis_Screenshot3.png](/0_Resources/Images/2_Project_Analysis_Screenshot3.png)
 
-    - 🛠️ data_job_skills
+    🛠️ **data_job_skills**
 
-        ![2_Project_Analysis_Screenshot4.png](/0_Resources/Images/2_Project_Analysis_Screenshot4.png)
+    ![2_Project_Analysis_Screenshot4.png](/0_Resources/Images/2_Project_Analysis_Screenshot4.png)
 
 ### 📊 Analysis
 
-#### 💡 Insights
+### 💡 Insights
 
-- 📈 There is a positive correlation between the number of skills requested in job postings and the median salary, particularly in roles like Senior Data Engineer and Data Scientist.
-- 💼 Roles that require fewer skills, like Business Analyst, tend to offer lower salaries, suggesting that more specialized skill sets command higher market value.
+- 📈 Terdapat korelasi positif antara jumlah skill yang diminta pada lowongan pekerjaan dengan median gaji, terutama pada posisi seperti Senior Data Engineer dan Data Scientist.
+- 💼 Posisi yang membutuhkan lebih sedikit skill, seperti Business Analyst, cenderung menawarkan gaji lebih rendah. Hal ini menunjukkan bahwa skill yang lebih spesifik/mendalam memiliki nilai pasar yang lebih tinggi.
 
     ![2_Project_Analysis_Chart1.png](/0_Resources/Images/2_Project_Analysis_Chart1.png)
 
-#### 🤔 So What
+### 🤔 Kesimpulan
 
-- This trend emphasizes the value of acquiring multiple relevant skills, particularly for individuals aiming for higher-paying roles.
+Tren ini menunjukkan pentingnya mempelajari dan menguasai berbagai skill relevan, khususnya bagi individu yang ingin memperoleh posisi dengan gaji lebih tinggi.
 
-## 2️⃣ What’s the salary for data jobs in different regions?
+## 2️⃣ Berapa rata-rata gaji pekerjaan data di berbagai wilayah?
 
 ### 🧮 Skills: PivotTables & DAX
 
-#### 📈Pivot Table
+### 📈Pivot Table
 
-- 🔢 I created a PivotTable using the Data Model I created with Power Pivot.
-- 📊 I moved the `job_title_short` to the rows area and `salary_year_avg` into the values area.
-- 🧮 Then I added new measure to calculate the median salary for United States jobs.
+- 🔢 Saya membuat PivotTable menggunakan Data Model yang telah dibuat melalui Power Pivot.
+- 📊 Kolom `job_title_short` ditempatkan pada bagian rows dan `salary_year_avg` pada bagian values.
+- 🧮 Kemudian saya menambahkan measure baru untuk menghitung median gaji pekerjaan di Amerika Serikat.
     ```
     =CALCULATE(
         MEDIAN(data_jobs_all[salary_year_avg]),
@@ -97,7 +101,7 @@ Dataset ini mencakup informasi detail mengenai:
 
 #### 🧮 DAX
 
-- To calculate the median year salary I used DAX.
+- Untuk menghitung median gaji tahunan, saya menggunakan DAX:
 
     ```
     Median Salary := MEDIAN(data_jobs_all[salary_year_avg])
@@ -107,48 +111,47 @@ Dataset ini mencakup informasi detail mengenai:
 
 #### 💡 Insights
 
-- 💼 Job roles like Senior Data Engineer and Data Scientist command higher median salaries both in the US and internationally, showcasing the global demand for high-level data expertise.
-- 💰 The salary disparity between US and Non-US roles is particularly notable in high-tech jobs, which might be influenced by the concentration of tech industries in the US.
+- 💼 Posisi seperti Senior Data Engineer dan Data Scientist memiliki median gaji tinggi baik di Amerika Serikat maupun secara internasional, menunjukkan tingginya permintaan terhadap keahlian data tingkat lanjut.
+- 💰 Perbedaan gaji antara pekerjaan di Amerika Serikat dan luar Amerika cukup signifikan, terutama pada pekerjaan teknologi tinggi. Hal ini kemungkinan dipengaruhi oleh tingginya konsentrasi industri teknologi di Amerika Serikat.
 
     ![2_Project_Analysis_Chart2.png](/0_Resources/Images/2_Project_Analysis_Chart2.png)
 
-#### **🤔 So What**
+#### **🤔 Kesimpulan **
 
-- These salary insights are important for planning and salary negotiations, helping professionals and companies align their offers with market standards while considering geographical variations.
+- Informasi gaji ini penting untuk perencanaan karier dan negosiasi gaji, baik bagi profesional maupun perusahaan agar dapat menyesuaikan standar pasar berdasarkan wilayah geografis.
 
-## 3️⃣ What are the top skills of data professionals?
-
+## 3️⃣ Apa saja skill utama para profesional data?  
 ### 🔧 Skill: Power Pivot
 
 #### 💪 Power Pivot
 
-- 🔗 I created a data model by integrating the `data_jobs_all` and `data_jobs_skills` tables into one model.
-- 🧹 Since I had already cleaned the data using Power Query; Power Pivot created a relationship between these two tables.
+- 🔗 Saya membuat data model dengan menggabungkan tabel `data_jobs_all` dan `data_jobs_skills`.
+- 🧹 Karena data sebelumnya sudah dibersihkan menggunakan Power Query, Power Pivot dapat langsung membuat relasi antar tabel.
 
 #### 🔗 Data Model
 
-- I created a relationship between my two tables using the `job_id` column.
+- Aku membuat relasi antar kedua tabel menggunakan kolom `job_id`.
 
     ![2_Project_Analysis_Screenshot5.png](/0_Resources/Images/2_Project_Analysis_Screenshot5.png)
 
 #### 📃 Power Pivot Menu
 
-- The Power Pivot menu was used to refine my data model and makes it easy to create measures.
-
+- Menu Power Pivot digunakan untuk menyempurnakan data model dan mempermudah pembuatan measure.
+  
     ![2_Project_Analysis_Screenshot6.png](/0_Resources/Images/2_Project_Analysis_Screenshot6.png)
 
 ### 📊Analysis
 
 #### 💡Insights
 
-- 💻 SQL and Python dominate as top skills in data-related jobs, reflecting their foundational role in data processing and analysis.
-- ☁️ Emerging technologies like AWS and Azure also show significant presence, underlining the industry's shift towards cloud services and big data technologies.
+- 💻 SQL dan Python menjadi skill paling dominan pada pekerjaan di bidang data, menunjukkan peran penting keduanya dalam pengolahan dan analisis data.
+- ☁️ Teknologi cloud seperti AWS dan Azure juga memiliki tingkat penggunaan yang tinggi, menandakan pergeseran industri menuju layanan cloud dan teknologi big data.
 
     ![2_Project_Analysis_Chart3.png](/0_Resources/Images/2_Project_Analysis_Chart3.png)
 
-#### 🤔So What
+#### 🤔Kesimpulan
 
-- Understanding prevalent skills in the industry not only helps professionals stay competitive but also guides training and educational programs to focus on the most impactful technologies.
+- Memahami skill yang paling banyak digunakan di industri membantu para profesional tetap kompetitif sekaligus menjadi acuan bagi program pelatihan dan pendidikan untuk fokus pada teknologi yang paling relevan.
 
 ## 4️⃣ What’s the pay of the top 10 skills?
 
@@ -159,23 +162,25 @@ Dataset ini mencakup informasi detail mengenai:
 - I created a combo PivotChart to plot median salary and skill likelihood (%) from my PivotTable.
     - 🪙 **Primary Axis:** Median Salary (as a Clustered Column)
     - 👍 **Secondary Axis:** Skill Likelihood (as a Line with Markers)
-- To customize the chart, I added a title axis title, removed the lines (skill likelihood), and changed the markers to diamonds.
+      
+Untuk menyesuaikan tampilan chart, saya:
+- Menambahkan judul chart dan axis
+- Menghapus garis pada skill likelihood
+- Mengubah marker menjadi bentuk diamond
 
 ### 📊 Analysis
 
 #### 💡Insights
 
-- 💰 Higher median salaries are associated with skills like Python, Oracle, and SQL, suggesting their critical role in high-paying tech jobs.
-- 📉 Skills like PowerPoint and Word have the lowest median salaries and likelihood, indicating less specialization and demand in high-salary sectors.
+- 💰 Median gaji yang lebih tinggi banyak dikaitkan dengan skill seperti Python, Oracle, dan SQL, yang menunjukkan pentingnya skill tersebut dalam pekerjaan teknologi dengan bayaran tinggi.
+- 📉 Skill seperti PowerPoint dan Word memiliki median gaji dan tingkat kebutuhan yang lebih rendah, menunjukkan bahwa skill tersebut kurang spesifik dan kurang diminati pada sektor dengan gaji tinggi.
 
     ![2_Project_Analysis_Chart4.png](/0_Resources/Images/2_Project_Analysis_Chart4.png)
 
-### 🤔So What
+### 🤔Kesimpulan
 
-- This chart highlights the importance of investing time in learning high-value skills like Python and SQL, which are evidently tied to higher paying roles, especially for those looking to maximize their salary in the tech industry.
+- Chart ini menunjukkan pentingnya berinvestasi waktu untuk mempelajari skill bernilai tinggi seperti Python dan SQL karena keduanya terbukti berkaitan dengan peluang karier dan gaji yang lebih besar di industri teknologi.
 
-## Conclusion
 
-As a data enthusiast and former job seeker, I embarked on this Excel-based project to uncover valuable insights about the data science job market. Using a dataset I've curated from real-world job postings, I analyzed job titles, salaries, locations, and essential skills. By leveraging Excel features like Power Query, PivotTables, DAX, and charts, I discovered key correlations between multiple skills and higher salaries, particularly in Python, SQL, and cloud technologies. 
 
-I hope this project serves as a practical guide for data professionals and provides an overview of the skills needed for higher-paying roles.
+Saya berharap proyek ini dapat menjadi referensi praktis bagi para profesional data maupun individu yang ingin memahami skill apa saja yang diperlukan untuk mendapatkan peluang kerja dengan gaji yang lebih tinggi.
