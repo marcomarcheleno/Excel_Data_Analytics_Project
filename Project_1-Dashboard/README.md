@@ -4,12 +4,12 @@
 
 ## Introduction
 
-This data jobs salary dashboard was created to help job seekers investigate salaries for their desired jobs and ensure they are being adequately compensated. 
+Dasbor gaji ini dibuat untuk membantu orang-orang yang sedang mencari kerja untuk mengetahui perkiraan gaji dari pekerjaan yang mereka inginkan.
 
-The data is from my Excel course, which provides a foundation in analyzing data using this powerful tool. The data contains detailed information on job titles, salaries, locations, and essential skills that are presented here.
+Data ini saya dapatkan dari kursus excel yang saya ikuti secara online dan data tersebut telah mengandung informasi yang cukup lengkap dari nama pekerjaan, gaji, lokasi, dan skill-skill yang dibutuhkan.
 
 ### Dashboard File
-My final dashboard is in [1_Salary_Dashboard.xlsx](1_Salary_Dashboard.xlsx).
+Finalisasi dasbor gajinya ada di link berikut [1_Salary_Dashboard.xlsx](Analisis Gaji Data Science.xlsx).
 
 ### Excel Skills Used
 
