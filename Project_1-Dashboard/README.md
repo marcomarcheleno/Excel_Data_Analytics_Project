@@ -9,7 +9,7 @@ Dasbor gaji ini dibuat untuk membantu orang-orang yang sedang mencari kerja untu
 Data ini saya dapatkan dari kursus excel yang saya ikuti secara online dan data tersebut telah mengandung informasi yang cukup lengkap dari nama pekerjaan, gaji, lokasi, dan skill-skill yang dibutuhkan.
 
 ### Dashboard File
-Finalisasi dasbor gajinya ada di link berikut [1_Salary_Dashboard.xlsx](Analisis Gaji Data Science.xlsx).
+Finalisasi dasbor gajinya ada di link berikut [Dasbor](Dasbor_Analisis_Gaji_Data_Science.xlsx).
 
 ### Excel Skills Used
 
