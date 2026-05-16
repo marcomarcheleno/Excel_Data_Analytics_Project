@@ -21,7 +21,9 @@ Berikut skill yang digunakan dalam analisis:
 
 ### Data Jobs Dataset
 
-Dataset yang digunakan dalam proyek ini mengandung informasi data science real-world dari tahun 2023. File ini mengandung informasi yang dibutuhkan dalam analsis. Berikut detail informasinya:  
+Dataset yang digunakan dalam proyek ini berisi data pekerjaan data science nyata dari tahun 2023. Dataset tersebut diperoleh dari kursus Excel yang saya ikuti dan digunakan sebagai dasar untuk melakukan analisis data menggunakan Excel.
+
+Dataset ini mencakup informasi detail mengenai: 
 
 - **👨‍💼 Job titles**
 - **💰 Salaries**
