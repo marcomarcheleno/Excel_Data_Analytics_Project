@@ -9,11 +9,11 @@ Dasbor gaji ini dibuat untuk membantu orang-orang yang sedang mencari kerja untu
 Data ini saya dapatkan dari kursus excel yang saya ikuti secara online dan data tersebut telah mengandung informasi yang cukup lengkap dari nama pekerjaan, gaji, lokasi, dan skill-skill yang dibutuhkan.
 
 ### Dashboard File
-Finalisasi dasbor gajinya ada di link berikut [Dasbor](Dasbor_Analisis_Gaji_Data_Science.xlsx).
+Finalisasi dasbor gajinya ada di link berikut [Dasbor](Dasbor_Analisis_Gaji_Data_Science.xlsx)
 
-### Excel Skills Used
+### Skill Excel Yang Digunakan
 
-The following Excel skills were utilized for analysis:
+Berikut skill yang digunakan dalam analisis:
 
 - **📉 Charts**
 - **🧮 Formulas and Functions**
@@ -21,7 +21,7 @@ The following Excel skills were utilized for analysis:
 
 ### Data Jobs Dataset
 
-The dataset used for this project contains real-world data science job information from 2023. The dataset is available via my Excel course, which provides a foundation for analyzing data using Excel. It includes detailed information on:
+Dataset yang digunakan dalam proyek ini mengandung informasi data science real-world dari tahun 2023. File ini mengandung informasi yang dibutuhkan dalam analsis. Berikut detail informasinya:  
 
 - **👨‍💼 Job titles**
 - **💰 Salaries**
@@ -36,20 +36,19 @@ The dataset used for this project contains real-world data science job informati
 
 <img src="/0_Resources/Images/1_Salary_Dashboard_Chart1.png" width="850" height="550" alt="Salary Dashboard Chart1">
 
-- 🛠️ **Excel Features:** Utilized bar chart feature (with formatted salary values) and optimized layout for clarity.
-- 🎨 **Design Choice:** Horizontal bar chart for visual comparison of median salaries.
-- 📉 **Data Organization:** Sorted job titles by descending salary for improved readability.
-- 💡 **Insights Gained:** This enables quick identification of salary trends, noting that Senior roles and Engineers are higher-paying than Analyst roles.
+- 🛠️ **Excel Features:** menggunakan fitur bar chart (dengan format nilai gaji) dan layout tampilan yang jelas.
+- 🎨 **Design Choice:** Horizontal bar chart untuk perbandingan visual atas median dari gaji.
+- 📉 **Data Organization:** Menyusun nama pekerjaan berdasarkan nilai gaji dari tertinggi ke terendah agar mudah dibaca.
+- 💡 **Insights Gained:** Memudahkan kita dalam mengidentifikasi tren gaji, bisa dilihat bahwa role Senior dan Engineer memiliki rata-rata gaji yang lebih tinggi dibanding role Analyst.
 
 #### 🗺️ Country Median Salaries - Map Chart
 
 ![1_Salary_Dashboard_Chart2.png](/0_Resources/Images/1_Salary_Dashboard_Country_Map.gif)
 
-- 🛠️ **Excel Features:** Utilized Excel's map chart feature to plot median salaries globally.
-- 🎨 **Design Choice:** Color-coded map to visually differentiate salary levels across regions.
-- 📊 **Data Representation:** Plotted median salary for each country with available data.
-- 👁️ **Visual Enhancement:** Improved readability and immediate understanding of geographic salary trends.
-- 💡 **Insights Gained:** Enables quick grasp of global salary disparities and highlights high/low salary regions.
+- 🛠️ **Excel Features:** Menggunakan fitur Map Chart dalam Excel untuk memperlihatkan median dari gaji secara global.
+- 🎨 **Design Choice:** Map berwarna yang dirancang untuk membedakan rata-rata gaji di berbagai negara secara visual.
+- 📊 **Data Representation:** Data yang bisa memperlihatkan median dari gaji untuk tiap negara.
+- 👁️ **Visual Enhancement:** Meningkatkan keterbacaan dan pemahaman yang lebih baik dari perbedaan gaji terhadap berbagai jenis faktor.
 
 ### 🧮 Formulas and Functions
 
@@ -67,10 +66,10 @@ IF(
 )
 ```
 
-- 🔍 **Multi-Criteria Filtering:** Checks job title, country, schedule type, and excludes blank salaries.
-- 📊 **Array Formula:** Utilizes `MEDIAN()` function with nested `IF()` statement to analyze an array.
-- 🎯 **Tailored Insights:** Provides specific salary information for job titles, regions, and schedule types.
-- **🔢 Formula Purpose:** This formula populates the table below, returning the median salary based on job title, country, and type specified.
+- 🔍 **Multi-Criteria Filtering:** Mengecek job title, negara, jenis jadwal kerja, dan mengecualikan kolom gaji yang kosong.
+- 📊 **Array Formula:** menggunakan fungsi `MEDIAN()` dengan nested `IF()`untuk menganalisis array.
+- 🎯 **Tailored Insights:** Menyediakan informasi gaji yang spesifik untuk job titles, negara dan jenis jadwal kerja.
+- **🔢 Formula Purpose:** Formula ini menciptakan tabel dibawah, menampilkan median dari gaji berdasarkan job title, negara dan jenis jawal kerja.
 
 🍽️ Background Table
 
@@ -86,8 +85,8 @@ IF(
 =FILTER(J2#,(NOT(ISNUMBER(SEARCH("and",J2#))+ISNUMBER(SEARCH(",",J2#))))*(J2#<>0))
 ```
 
-- 🔍 **Unique List Generation:** This Excel formula below employs the `FILTER()` function to exclude entries containing "and" or commas, and omit zero values.
-- **🔢 Formula Purpose:** This formula populates the table below, which gives us a list of unique job schedule types.
+- 🔍 **Unique List Generation:** Formula Excel ini fungsi `FILTER()` untuk mengeluarkan nilai yang mengandung "and" atau koma, dan mengeluarkan nilai 0.
+- **🔢 Formula Purpose:** Formula ini menciptakan tabel dibawah yang memperlihatkan kita list dari setiap jenis jadwal kerja.
 
 🍽️ Background Table
 
@@ -101,13 +100,9 @@ IF(
 
 #### 🔍 Filtered List
 
-- 🔒 **Enhanced Data Validation:** Implementing the filtered list as a data validation rule under the `Job Title`, `Country`, and `Type` option in the Data tab ensures:
-    - 🎯 User input is restricted to predefined, validated schedule types
-    - 🚫 Incorrect or inconsistent entries are prevented
-    - 👥 Overall usability of the dashboard is enhanced
+- 🔒 **Enhanced Data Validation:** Mengimplementasikan list yang telah difilter untuk opsi `Job Title`, `Country`, dan `Type`dalam tab data untuk memastikan:  
+   - 🎯 Input pengguna tetap terstruktur dan sesuai dengan pilihan yang telah ditentukan
+   - 🚫 Mencegah entri data yang tidak valid atau tidak konsisten
+   - 🧩 Meningkatkan kemudahan penggunaan serta efisiensi dashboard secara keseluruhan
 
 <img src="/0_Resources/Images/1_Salary_Dashboard_Data_Validation.gif" width="425" height="400" alt="Salary Dashboard Data Validation">
-
-## Conclusion
-
-I created this dashboard to showcase insights into salary trends across various data-related job titles. Utilizing data from my Excel course, this dashboard allows users to make informed decisions about their career paths. Exploring the functionalities to understand how location and job type influence salaries. 
