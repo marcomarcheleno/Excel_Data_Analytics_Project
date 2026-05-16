@@ -1,6 +1,6 @@
 # Excel_Data_Analytics_Project
 ## Salary Dashboard
-Dasbor gaji ini dibuat untuk membantu orang-orang yang sedang mencari kerja untuk mengetahui perkiraan gaji dari pekerjaan yang mereka inginkan.  
+Dashboard gaji ini dibuat untuk membantu orang-orang yang sedang mencari kerja untuk mengetahui perkiraan gaji dari pekerjaan yang mereka inginkan.  
 [Klik untuk lihat proyeknya](Project_1-Dashboard)
 
 <img width="870" height="370" alt="1_Salary_Dashboard_Final_Dashboard" src="0_Resources/Images/1_Salary_Dashboard_Final_Dashboard.gif" />
